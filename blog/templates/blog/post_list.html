@@ -10,6 +10,14 @@
     <div>
       <p>published: 25.09.1678, 11:65</p>
       <h2><a href="https://de.wikipedia.org/wiki/JoJo">Gönn dir</a></h2>
-    <p> Yoyoyo! Laura guck mal jo #ichbineinpro </p>
+      <p> Yoyoyo! Laura guck mal jo #ichbineinpro </p>
+    </div>
+      {% for post in posts %}
+    <div>
+      <p>published: {{ post.published_date }} </p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}
+      {% endfor %}
+    </div>
   </body>
 </html>
